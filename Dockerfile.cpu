@@ -1,4 +1,4 @@
-FROM deepquestai/deepstack-base:cpu-412378893 as cpu 
+FROM malenurse/deepstack-base:cpu as cpu
 
 ENV SLEEP_TIME 0.01
 ENV CUDA_MODE False
@@ -37,7 +37,7 @@ COPY ./server /app/server
 RUN mkdir /app/intelligencelayer
 COPY ./intelligencelayer /app/intelligencelayer
 
-COPY ./init.py /app 
+COPY ./init.py /app
 
 EXPOSE 5000
 
