@@ -18,7 +18,7 @@ ENV TEMP_PATH /deeptemp/
 ENV PROFILE desktop_cpu
 
 WORKDIR /app
-RUN pip install onnxruntime==0.4.0
+RUN pip install onnxruntime
 
 RUN pip3 install redis
 RUN pip3 install opencv-python
