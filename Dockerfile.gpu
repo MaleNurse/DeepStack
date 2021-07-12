@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.2.1-cudnn8-runtime-ubuntu20.04
+FROM nvidia/cuda:11.1-cudnn8-runtime-ubuntu20.04
 
 RUN apt-get update -y
 RUN apt install software-properties-common -y
@@ -10,7 +10,7 @@ RUN apt-get install python3-pip -y
 RUN apt-get install redis-server -y
 RUN pip3 install --upgrade setuptools pip
 RUN apt-get install libsm6 libxext6 libxrender1 libglib2.0-0 ffmpeg -y
-RUN pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
 ENV SLEEP_TIME 0.01
 ENV CUDA_MODE True
